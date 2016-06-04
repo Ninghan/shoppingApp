@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "lltan.jikexueyuan.com.lego"
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories{
+    jcenter()
+    flatDir{
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:recyclerview-v7:23.0.1'
+    compile 'com.android.support:cardview-v7:23.0.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.facebook.fresco:fresco:0.9.0+'
+    compile 'com.github.d-max:spots-dialog:0.4@aar'
+    compile 'com.cjj.materialrefeshlayout:library:1.3.0'
+    compile 'com.jiechic.library:xUtils:2.6.14'
+    compile 'org.xutils:xutils:3.3.26'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.slider:library:1.1.5@aar'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.w4lle.library:NineLayout:1.0.0'
+//    compile 'com.bigkoo:pickerview:2.0.8'
+    compile project(':smssdk')
+    compile project(':pickerview')
+    compile project(':sharesdk')
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EasyGoToolBar">
+        <attr name="rightButtonIcon" format="reference"></attr>
+        <attr name="rightButtonText" format="string"></attr>
+        <attr name="isShowSearchView" format="boolean"></attr>
+        <attr name="rightButtonWidth" format="dimension"></attr>
+        <attr name="rightButtonHeight" format="dimension"></attr>
+    </declare-styleable>
+    <attr name="value" format="integer|reference"/>
+    <attr name="minValue" format="integer|reference"/>
+    <attr name="maxValue" format="integer|reference"/>
+    <attr name="editBackground" format="reference"/>
+    <attr name="buttonAddBackgroud" format="reference"/>
+    <attr name="buttonSubBackgroud" format="reference"/>
+    <declare-styleable name="NumberAddSub">
+        <attr name="value"/>
+        <attr name="minValue"/>
+        <attr name="maxValue"/>
+        <attr name="editBackground"/>
+        <attr name="buttonAddBackgroud"/>
+        <attr name="buttonSubBackgroud"/>
+
+    </declare-styleable>
+
+</resources>

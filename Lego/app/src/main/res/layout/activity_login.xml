@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+
+    <lltan.jikexueyuan.com.lego.widget.EasyGoToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:title="乐购账户登录"
+        app:navigationIcon="@drawable/icon_back_32px"
+        />
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_view_block"
+        android:padding="@dimen/littlePadding">
+
+
+        <lltan.jikexueyuan.com.lego.widget.ClearEditText
+            android:id="@+id/etxt_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_telphone_32"
+            android:drawablePadding="20dp"
+            android:hint="请输入手机号码"
+            style="@style/editText_base"
+            android:inputType="phone"
+            />
+
+        <View
+            style="@style/line_vertical"/>
+
+
+        <lltan.jikexueyuan.com.lego.widget.ClearEditText
+            android:id="@+id/etxt_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_lock"
+            android:drawablePadding="20dp"
+            android:hint="请输入登录密码"
+            style="@style/editText_base"
+            android:inputType="textPassword"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/bigRedButton"
+        android:text="登 录"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:enabled="false"
+        />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="@dimen/largePadding"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txt_toReg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="注册账号"
+            android:layout_weight="1"
+            android:textColor="@color/blue"
+            android:textSize="12sp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/txt_toGetPwd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="忘记密码"
+            android:layout_weight="1"
+            android:textColor="@color/blue"
+            android:textSize="12sp"
+            android:gravity="right"
+
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

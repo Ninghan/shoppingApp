@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <lltan.jikexueyuan.com.lego.widget.EasyGoToolBar
+        android:id="@+id/ez_toolbar"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:title="购物车"
+        app:rightButtonText="编辑"
+        android:layout_alignParentTop="true"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ez_toolbar"
+        android:layout_marginBottom="50dp">
+
+    </android.support.v7.widget.RecyclerView>
+    <TextView
+        android:id="@+id/txt_go"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:maxLines="2"
+        android:gravity="center_vertical|center"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/bottomControls"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="5dp"
+        android:background="#802f4f4f"
+        android:gravity="center_vertical"
+        >
+
+        <CheckBox
+            android:id="@+id/checkbox_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:checked="false"
+            android:text="全选"
+            style="@style/customCheckbox"/>
+
+
+        <TextView
+            android:id="@+id/txt_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/lay_btn"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textSize="15sp"
+            android:text="合计"/>
+
+        <LinearLayout
+            android:id="@+id/lay_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            >
+            <Button
+                android:id="@+id/btn_order"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minHeight="30dp"
+                android:minWidth="100dp"
+                android:text="结算"
+                style="@style/bigRedButton"/>
+
+
+            <Button
+                android:id="@+id/btn_del"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:minHeight="30dp"
+                android:minWidth="100dp"
+                android:text="删除"
+                style="@style/bigRedButton"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

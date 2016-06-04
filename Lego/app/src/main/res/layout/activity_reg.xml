@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <lltan.jikexueyuan.com.lego.widget.EasyGoToolBar
+        android:id="@id/toolbar"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/icon_back_32px"
+        app:title="用户注册(1/2)"
+        app:rightButtonText="下一步"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/selector_view_block"
+        android:padding="@dimen/largePadding">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/largePadding"
+            android:paddingBottom="@dimen/largePadding"
+
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="国家或者地区"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                />
+
+
+            <TextView
+                android:id="@+id/txtCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中国"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+        <View
+            style="@style/line_vertical"
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/largePadding"
+            android:paddingBottom="@dimen/largePadding"
+            android:orientation="horizontal"
+            >
+
+
+            <TextView
+                android:id="@+id/txtCountryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+86"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginRight="10dp"
+
+                />
+
+            <View
+                style="@style/line_horizontal"/>
+
+            <lltan.jikexueyuan.com.lego.widget.ClearEditText
+                android:id="@+id/edittxt_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/editText_base"
+                android:hint="请输入常用手机号码"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:inputType="phone"/>
+
+
+
+        </LinearLayout>
+
+        <View
+            style="@style/line_vertical"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/littlePadding"
+            android:paddingBottom="@dimen/littlePadding"
+            android:orientation="horizontal"
+            >
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密码"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginRight="10dp"
+
+                />
+
+            <View
+                style="@style/line_horizontal"/>
+
+            <lltan.jikexueyuan.com.lego.widget.ClearEditText
+                android:id="@+id/edittxt_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/editText_base"
+                android:hint="请输入密码"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:inputType="textPassword"/>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击‘下一步’ 按钮，表示你同意《乐购用户协议》"
+        android:textColor="@color/border_color"
+        android:textSize="12sp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="@dimen/largePadding"
+
+        />
+
+
+
+
+</LinearLayout>

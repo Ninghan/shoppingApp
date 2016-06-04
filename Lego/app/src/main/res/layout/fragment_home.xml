@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <lltan.jikexueyuan.com.lego.widget.EasyGoToolBar
+        android:id="@id/toolbar"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isShowSearchView="true"
+        />
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:pager_animation="Accordion"
+                app:auto_cycle="true"
+                app:indicator_visibility="visible"
+                app:pager_animation_span="500"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="10dp"
+                    android:gravity="right|bottom">
+                <com.daimajia.slider.library.Indicators.PagerIndicator
+                    android:id="@+id/custom_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:selected_color="#ffff0000"
+                    app:unselected_color="#fffffff0"
+                    app:shape="oval"
+                    app:selected_padding_left="4dp"
+                    app:selected_padding_right="4dp"
+                    app:unselected_padding_left="4dp"
+                    app:unselected_padding_right="4dp"
+                    app:selected_width="6dp"
+                    app:selected_height="6dp"
+                    app:unselected_width="6dp"
+                    app:unselected_height="6dp"
+                    />
+                </RelativeLayout>
+            </com.daimajia.slider.library.SliderLayout>
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                >
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
